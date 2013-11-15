@@ -1,0 +1,17 @@
+name: arm6-c
+version: 0.0.1
+inherits: wercker/ubuntu12.04-webessentials@0.0.3
+type: main
+platform: ubuntu@12.04
+description: wercker box for developing applications on ARM6 platforms
+keywords:
+  - ARM
+  - embedded
+  - C
+  - Assembly
+script: |
+  cd $HOME
+  wget http://www.cl.cam.ac.uk/freshers/raspberrypi/tutorials/os/downloads/arm-none-eabi.tar.bz2
+  tar xjvf arm-none-eabi.tar.bz2
+env:
+  PATH: $PATH:$HOME/arm-2008q3/bin
